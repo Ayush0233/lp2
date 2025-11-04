@@ -34,3 +34,18 @@ input,select{width:100%;padding:10px;border-radius:10px;border:1px solid #e6f4eb
 .list li{padding:8px 0;border-bottom:1px solid #f3f8f4}
 .footer{margin-top:16px;color:var(--muted);font-size:13px;text-align:center}
 @media (max-width:880px){.grid{grid-template-columns:1fr}.side-card{margin-top:12px}}
+
+
+
+
+/* # from main (production baseline)
+git checkout -b dev
+git push -u origin dev
+
+# create staging branch from dev when ready
+git checkout -b staging dev
+git push -u origin staging
+
+# return to main
+git checkout main
+git push -u origin main */
