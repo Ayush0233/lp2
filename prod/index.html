@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Prod — Student Registration</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="logo">SD</div>
+          <div>
+            <div class="title">Student Registration</div>
+            <div class="sub">Production — public version</div>
+          </div>
+        </div>
+        <div class="env-badge">PROD</div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <form id="studentForm">
+            <div class="form-group"><label>Roll Number</label><input id="roll" required></div>
+            <div class="form-group"><label>Name</label><input id="name" required></div>
+            <div class="form-group"><label>Course</label><input id="course" required></div>
+            <div class="form-group"><label>Gender</label><select id="gender"><option>male</option><option>female</option><option>other</option></select></div>
+            <div class="form-group"><label>Email</label><input id="email" type="email" required></div>
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+
+        <aside class="side-card">
+          <div><strong>Environment</strong><div style="color:#4b5563">Production</div></div>
+          <div style="margin-top:10px;color:#6b7280">Production copy — ensure testing is completed before updating this environment.</div>
+        </aside>
+      </div>
+
+      <div class="footer">Production folder simulates the live site.</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('studentForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const s = {roll:document.getElementById('roll').value,name:document.getElementById('name').value,course:document.getElementById('course').value,gender:document.getElementById('gender').value,email:document.getElementById('email').value};
+      alert('Thank you! (simulated production)\\n' + JSON.stringify(s,null,2));
+      this.reset();
+    });
+  </script>
+</body>
+</html>
